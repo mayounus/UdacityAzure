@@ -159,6 +159,6 @@ resource "azurerm_virtual_machine_data_disk_attachment" "UdacityProject" {
   count = "${var.VirtualMachines}"
   managed_disk_id = azurerm_managed_disk.UdacityProject[count.index].id
   virtual_machine_id = azurerm_linux_virtual_machine.UdacityProject[count.index].id
-  lun = "10${count.index}"
+  lun = "${count.index}"
   caching = "ReadWrite"
 }
