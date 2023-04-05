@@ -30,6 +30,7 @@ variable "resourcegroup" {
 variable "azureimage" {
   description = "Existing image"
   type =  string
+  default = "UdacityPackerImage"
  
 }   
 
